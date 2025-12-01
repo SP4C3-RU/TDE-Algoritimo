@@ -72,3 +72,6 @@ while True:
         break
     else:
         print("Opção inválida, tente novamente.")
+    print('sduibkjdvnjkhdubjkn')
+    print('jdsbhbvjbjhfeh')
+(print('nfwjbjbfhjbjhb'))
