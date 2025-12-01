@@ -9,7 +9,7 @@ def mostrar_menu():
     return input("Escolha uma opção: ")
 
 def listar_tarefas(tarefas):
-    if len(tarefas) == 0:
+    if len(tarefas) == 1:
         print("\nNenhuma tarefa cadastrada.")
     else:
         print("\n=== LISTA DE TAREFAS ===")
@@ -25,7 +25,7 @@ def adicionar_tarefa(tarefas):
      listar_tarefas(tarefas)
     if tarefas:
         indice = int(input("Digite o número da tarefa a marcar como concluída: "))
-        if 0 <= indice < len(tarefas):
+        if 1 <= indice < len(tarefas):
             tarefas[indice]["status"] = True
             print("Tarefa marcada como concluída!")
         else:
@@ -35,7 +35,7 @@ def editar_tarefa(tarefas):
     listar_tarefas(tarefas)
     if tarefas:
         indice = int(input("Digite o número da tarefa a editar: "))
-        if 0 <= indice < len(tarefas):
+        if 1 <= indice < len(tarefas):
             nova_desc = input("Digite a nova descrição: ")
             tarefas[indice]["descricao"] = nova_desc
             print("Tarefa editada!")
@@ -45,7 +45,7 @@ def editar_tarefa(tarefas):
              listar_tarefas(tarefas)
     if tarefas:
         indice = int(input("Digite o número da tarefa a remover: "))
-        if 0 <= indice < len(tarefas):
+        if 1 <= indice < len(tarefas):
             tarefas.pop(indice)
             print("Tarefa removida!")
         else:
